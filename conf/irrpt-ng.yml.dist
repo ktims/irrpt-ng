@@ -1,0 +1,33 @@
+company_name: Internet Company Inc.
+
+paths:
+- tmp: "/tmp"
+- conf: "/etc/irrpt-ng/"
+- db: "/var/lib/irrpt-ng/"
+
+tools:
+- cvs: "/usr/bin/cvs"
+
+aggregate:
+- enabled: true
+- ipv4_max: 24
+- ipv6_max: 48
+
+diff:
+- params: "-u -U 2"
+- output_format: "english"
+
+irr:
+- whois_host: "whois.radb.net"
+- whois_port: 43
+- sources: "all"
+- cache: true
+- ipv6: true
+
+email:
+- enabled: true
+- to: "user@example.com"
+- from: "peering@example.com"
+- reply-to: "peering@example.com"
+- subject: "[IRRPT-ng] "
+
